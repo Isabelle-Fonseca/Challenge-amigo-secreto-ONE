@@ -52,3 +52,17 @@ function removerAmigo(index) {
     amigos.splice(index, 1); 
     atualizarLista(); 
 }
+
+// função para sortear um amigo aleatoriamente
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("A lista está vazia! Por favor adicione nomes antes de sortear.");
+        return;
+    }
+
+    let iAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[iAleatorio];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>O amigo secreto sorteado é: <strong>${amigoSorteado}</strong></li>`;
+}
