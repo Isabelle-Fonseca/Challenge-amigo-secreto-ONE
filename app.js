@@ -46,3 +46,9 @@ function atualizarLista() {
         lista.appendChild(li);
     }
 }
+
+// função para remover amigo
+function removerAmigo(index) {
+    amigos.splice(index, 1); 
+    atualizarLista(); 
+}
