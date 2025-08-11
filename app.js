@@ -60,6 +60,11 @@ function sortearAmigo() {
         return;
     }
 
+    if (amigos.length < 2) {
+        alert("Você precisa de pelo menos dois amigos para sortear.");
+        return;
+    }
+
     let iAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoSorteado = amigos[iAleatorio];
 
